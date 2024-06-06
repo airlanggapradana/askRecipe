@@ -24,7 +24,7 @@ const style = {
 const Navbar = () => {
   return (
     <>
-      <header className="w-full fixed top-0 border-b-2 shadow">
+      <header className="w-full fixed top-0 border-b-2 shadow bg-gray-100 z-50">
         <div className="container px-4 sm:px-6 lg:px-8">
           <div className="flex h-16 items-center justify-between">
             <div className="md:flex md:items-center md:gap-12">
