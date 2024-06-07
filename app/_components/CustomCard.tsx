@@ -11,7 +11,7 @@ import { Recipe } from "@/types/recipeTypes";
 
 const CustomCard = ({ food }: { food: Recipe }) => {
   return (
-    <Card className="h-full bg-gray-100 overflow-hidden shadow-md">
+    <Card className="h-full bg-gray-100 overflow-hidden shadow-md dark:bg-gray-800">
       <CardHeader className="space-y-4">
         <img
           src={food.image}

@@ -40,7 +40,7 @@ const AsianFood = () => {
   const foodLists: Recipe[] = res?.data?.recipes;
   return (
     <>
-      <h1 className="text-2xl font-bold">Asian Food</h1>
+      <h1 className="text-2xl font-bold dark:text-teal-400">Asian Food</h1>
 
       <Carousel>
         <CarouselContent className="p-2">

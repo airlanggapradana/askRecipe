@@ -35,7 +35,7 @@ const AllFood = () => {
   const foodLists: Recipe[] = data?.data?.recipes;
   return (
     <>
-      <h1 className="text-2xl font-bold">All Foods</h1>
+      <h1 className="text-2xl font-bold dark:text-teal-400">All Foods</h1>
       <Carousel>
         <CarouselContent className="p-2">
           {foodLists?.map((food: Recipe) => (
