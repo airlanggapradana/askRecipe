@@ -42,25 +42,32 @@ const AsianFood = () => {
     <>
       <h1 className="text-2xl font-bold dark:text-teal-400">Asian Food</h1>
 
-      <Carousel>
-        <CarouselContent className="p-2">
-          {foodLists?.map((food: Recipe) => (
-            <CarouselItem key={food.id} className="basis-[70%] lg:basis-[20%]">
-              <Dialog>
-                <DialogTrigger className="h-full">
-                  <CustomCard key={food.id} food={food} />
-                </DialogTrigger>
+      {isLoading ? (
+        <div className="custom-loader"></div>
+      ) : (
+        <Carousel>
+          <CarouselContent className="p-2">
+            {foodLists?.map((food: Recipe) => (
+              <CarouselItem
+                key={food.id}
+                className="basis-[70%] lg:basis-[20%]"
+              >
+                <Dialog>
+                  <DialogTrigger className="h-full">
+                    <CustomCard key={food.id} food={food} />
+                  </DialogTrigger>
 
-                <DialogContent className="max-w-screen-2xl overflow-hidden">
-                  <DetailCard detail={food} />
-                </DialogContent>
-              </Dialog>
-            </CarouselItem>
-          ))}
-        </CarouselContent>
-        <CarouselPrevious />
-        <CarouselNext />
-      </Carousel>
+                  <DialogContent className="max-w-screen-2xl max-h-[90%] overflow-auto">
+                    <DetailCard detail={food} />
+                  </DialogContent>
+                </Dialog>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          <CarouselPrevious />
+          <CarouselNext />
+        </Carousel>
+      )}
     </>
   );
 };
