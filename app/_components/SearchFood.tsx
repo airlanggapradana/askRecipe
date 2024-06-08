@@ -66,7 +66,7 @@ const SearchFood = () => {
           ) : (
             <div className="grid grid-cols-1 gap-4 lg:grid-cols-5 lg:gap-8">
               {data.map((item) => (
-                <Dialog>
+                <Dialog key={item.id}>
                   <DialogTrigger className="h-full">
                     <CustomCard key={item.id} food={item} />
                   </DialogTrigger>

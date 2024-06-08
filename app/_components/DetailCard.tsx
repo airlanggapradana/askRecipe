@@ -38,8 +38,10 @@ const DetailCard = ({ detail }: { detail: Recipe }) => {
                 </span>
                 Ingredients
               </h1>
-              {detail.ingredients.map((item) => (
-                <li className="dark:text-gray-50">{item}</li>
+              {detail.ingredients.map((item, index) => (
+                <li className="dark:text-gray-50" key={index}>
+                  {item}
+                </li>
               ))}
             </div>
 
@@ -50,8 +52,10 @@ const DetailCard = ({ detail }: { detail: Recipe }) => {
                 </span>
                 Instructions
               </h1>
-              {detail.instructions.map((item) => (
-                <li className="dark:text-gray-50">{item}</li>
+              {detail.instructions.map((item, index) => (
+                <li className="dark:text-gray-50" key={index}>
+                  {item}
+                </li>
               ))}
             </div>
           </div>

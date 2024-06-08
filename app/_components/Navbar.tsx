@@ -47,12 +47,7 @@ const Navbar = () => {
               </ul>
             </div>
 
-            <div className="flex items-center gap-3">
-              <ThemeToggle />
-              <button className="rounded bg-teal-500 px-8 py-2.5 text-base font-semibold text-gray-100 shadow">
-                Login
-              </button>
-            </div>
+            <ThemeToggle />
           </div>
         </div>
       </header>
